@@ -14,7 +14,7 @@ public class GetController {
     }
 
     @RequestMapping(method = RequestMethod.GET, path = "/anotherGetApi")
-    public String anotherGetApi(@RequestParam(name = "userId") String id,
+    public String anotherGetApi(@RequestParam(name = "userId") String id,  // get 방식에서는 파라미터로 data를 받아오기 때문에 @RequestParam를 사용한다.
                                 @RequestParam(name = "userName") String name){
         return "id="+id+", 이름은 "+name;
     }
